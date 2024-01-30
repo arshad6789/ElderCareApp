@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.medicaldelivery"> <!-- <uses-feature -->
+    <!-- android:name="android:hardware.sensor.accelerometer" -->
+    <!-- android:required="true" /> -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/elder"
+        android:label="Health APP"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/elder"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedicalDelivery"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".User_view_medication_details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_view_payment_apo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_pay_appoin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Doctor_add_amount"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_news"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_medication_details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_make_payment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_add_bills"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_reminder_seting_for_user"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <receiver
+            android:name=".ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service android:name=".LocationService" />
+        <service android:name=".SocialDistanceAlert" />
+
+        <activity
+            android:name=".ReminderReceiver"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_alaram"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Alaram_setting"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_view_food_details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Doctor_update_food_details"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Addreminter"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".User_view_news"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Doctor_update_profile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Customer_send_complaint"
+            android:exported="false" />
+        <activity
+            android:name=".User_download_files"
+            android:exported="false" />
+        <activity
+            android:name=".user_uploaddoctor_prescription_to_medicalshop"
+            android:exported="false" />
+        <activity
+            android:name=".UserViewDoctorPrescription"
+            android:exported="false" />
+        <activity
+            android:name=".User_emer_no"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorUploadPrescription"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorViewCustomers"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorViewAppointments"
+            android:exported="false" />
+        <activity
+            android:name=".UserViewAppointments"
+            android:exported="false" />
+        <activity
+            android:name=".UserMakeAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".UserViewDoctors"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorHome"
+            android:exported="false" />
+        <activity android:name=".Deliveryviewrating" />
+        <activity android:name=".Userviewuploadedmedicine" />
+        <activity android:name=".Userviewmedicalshop" />
+        <activity android:name=".Userregister" />
+        <activity android:name=".Deliveryhome" />
+        <activity android:name=".Deliveryregister" />
+        <activity android:name=".Userviewdeliveryboys" />
+        <activity android:name=".Deliveryvieworderspickedup" />
+        <activity android:name=".Deliveryviewordersdispatched" />
+        <activity android:name=".Login" />
+        <activity android:name=".Userhome" />
+        <activity android:name=".Usermakepayment" />
+        <activity android:name=".Usermakerate" />
+        <activity android:name=".Ipsettings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Usersendfeedback" />
+    </application>
+
+</manifest>
