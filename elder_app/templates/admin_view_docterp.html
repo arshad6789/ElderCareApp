@@ -1,0 +1,63 @@
+{% include 'adminheader.html' %}
+
+   <section style="background: url(/static/images/m3.jpg) center center no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  color: #cfcfcf;height: auto;
+        margin-top:80px;" id="home">
+       <div class="overlay">
+           <div class="container">
+               <div class="row">
+<center>
+	<form method="post">
+		
+<h1>PAYMENTS REPORTS</h1>
+		<table class="table" style="width: 1000PX">
+		<tr>
+			<th>SL.NO</th>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Amount</th>
+            <th>Details</th>
+            <th>Status </th>
+			
+		</tr>
+		{% for row in data['orders'] %}
+        <tr>
+            <td>{{loop.index}}</td>
+              <td>{{row['firstname']}} {{row['lastname']}}</td>
+              <td>{{row['fname']}} {{row['lname']}}</td>
+              <td>{{row['appoin_amount']}}</td>
+            <td>{{row['reminder']}}</td>
+            <td>{{row['status']}}</td>
+
+
+<!-- 
+         {% if row['status']=='pending' %}
+            <td><a href="shop_upoload_medi?prescription_id={{row['prescription_id']}}&name={{row['firstname']}}" class="btn btn-danger">UPLOAD MEDICINE DETAILS</a></td>
+          {% endif %}
+
+           {% if row['status']=='paid' %}  
+           <td><a href="shopviewpro?prescription_id={{row['prescription_id']}}&name={{row['firstname']}}" class="btn btn-danger">VIEW PRODUCTS</a></td> 
+             {% if row['status']!='dispatched' %} 
+            <td><a href="shop_assigntodboy?prescription_id={{row['prescription_id']}}&name={{row['firstname']}}" class="btn btn-danger">ASSIGN TO DELIVERY BOYS</a></td>
+              {% endif %}
+          {% endif %} -->
+
+            
+        </tr>
+        {% endfor %}
+      
+       
+	</table>
+	</form>
+</center>
+                           
+	  </div>
+           </div>
+           <br><br><br><br><br><br><br><br><br>
+       </div>  
+      
+   </section>
+		   		
+{% include 'footer.html' %}
